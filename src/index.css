@@ -1,0 +1,113 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    border-color: #111110;
+  }
+
+  body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    color: #111110;
+    background-color: #F6F5F0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: 'Plus Jakarta Sans', 'Inter', system-ui, sans-serif;
+    letter-spacing: -0.025em;
+  }
+
+  .font-mono, input[type="number"], .tabular-numbers {
+    font-family: 'JetBrains Mono', monospace;
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* Custom range slider styling for brutalist look */
+  input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    background: transparent;
+    cursor: pointer;
+  }
+
+  input[type="range"]:focus {
+    outline: none;
+  }
+
+  /* WebKit Slider Thumb */
+  input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    height: 20px;
+    width: 20px;
+    background-color: #EA580C;
+    border: 2px solid #111110;
+    border-radius: 0px;
+    cursor: ew-resize;
+    box-shadow: 2px 2px 0px #111110;
+    margin-top: -8px;
+    transition: transform 0.05s ease;
+  }
+
+  input[type="range"]:active::-webkit-slider-thumb {
+    transform: scale(1.15);
+  }
+
+  /* WebKit Slider Track */
+  input[type="range"]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 4px;
+    background: #111110;
+    border-radius: 0px;
+  }
+
+  /* Firefox Slider Thumb */
+  input[type="range"]::-moz-range-thumb {
+    height: 18px;
+    width: 18px;
+    background-color: #EA580C;
+    border: 2px solid #111110;
+    border-radius: 0px;
+    cursor: ew-resize;
+    box-shadow: 2px 2px 0px #111110;
+  }
+
+  /* Firefox Slider Track */
+  input[type="range"]::-moz-range-track {
+    width: 100%;
+    height: 4px;
+    background: #111110;
+  }
+}
+
+/* Custom Swiss Brutalist Border utilities */
+.border-carbon {
+  border-color: #111110;
+}
+
+.shadow-brutalist {
+  box-shadow: 3px 3px 0px #111110;
+}
+
+.shadow-brutalist-sm {
+  box-shadow: 1.5px 1.5px 0px #111110;
+}
+
+.shadow-brutalist-hover:hover {
+  box-shadow: 1px 1px 0px #111110;
+  transform: translate(2px, 2px);
+}
+
+/* Native modal dialog scroll containment & backdrop styling */
+dialog:modal {
+  overscroll-behavior: contain;
+}
+
+dialog::backdrop {
+  overflow: hidden;
+  overscroll-behavior: contain;
+  background-color: rgba(17, 17, 16, 0.72);
+}

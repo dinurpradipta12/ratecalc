@@ -1,0 +1,299 @@
+[
+  {
+    "op": "clear",
+    "range": "RINGKASAN_PAYROLL!A1:K100"
+  },
+  {
+    "op": "write",
+    "range": "RINGKASAN_PAYROLL!A1",
+    "data": [
+      [
+        "TEAM PAYROLL, MULTI-TIER GUARDRAIL & TASK BOUNTY LEDGER",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "Spreadsheet ID:",
+        "1T2Z02j95WM6eQqKsZslkNf7PsKDipWa-5EHGuW14KTc",
+        "Status Koneksi:",
+        "CONNECTED LIVE",
+        "Update Terakhir:",
+        "2026-11-10",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "PARAMETER ANGGARAN & TIER GUARDRAIL",
+        "NILAI (IDR)",
+        "PROPORSI / BOBOT",
+        "STATUS / KETERANGAN",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "Pool Anggaran Bulanan",
+        0,
+        "100.0%",
+        "Pagu Anggaran Maksimal Bulanan",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "Total Gaji Pokok Tier",
+        0,
+        "=IF(B5>0; ROUND(B6/B5*100; 1)&\"%\"; \"0.0%\")",
+        "Total Gaji Pokok Seluruh Personel",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "Total Komisi Bounty Selesai",
+        0,
+        "=IF(B5>0; ROUND(B7/B5*100; 1)&\"%\"; \"0.0%\")",
+        "Total Bounty dari Task Berstatus SELESAI",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "Grand Total Alokasi",
+        "=B6+B7",
+        "=IF(B5>0; ROUND(B8/B5*100; 1)&\"%\"; \"0.0%\")",
+        "Gaji Pokok + Bounty Selesai",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "Sisa Saldo / Defisit",
+        "=B5-B8",
+        "=IF(B5>0; ROUND(B9/B5*100; 1)&\"%\"; \"0.0%\")",
+        "=IF(B9<0; \"OVER BUDGET (DEFISIT)\"; \"SURPLUS SAFE\")",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "TIER_01 Floor (Lead / Manager)",
+        100000,
+        "2.2x",
+        "Batas Bawah Minimal TIER_01 (Min Rp 100.000)",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "TIER_02 Floor (Senior / Specialist)",
+        100000,
+        "1.5x",
+        "Batas Bawah Minimal TIER_02 (Min Rp 100.000)",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "TIER_03 Floor (Core Team / Associate)",
+        100000,
+        "1x",
+        "Batas Bawah Minimal TIER_03 (Min Rp 100.000)",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "NO",
+        "PERSON_ID",
+        "NAMA PERSONEL",
+        "ROLE TITLE",
+        "TIER_CODE",
+        "LOCK_STATUS",
+        "GAJI POKOK (IDR)",
+        "TASK SELESAI",
+        "BOUNTY SELESAI (IDR)",
+        "TOTAL TAKE-HOME PAY (IDR)",
+        "SHARE ALOKASI (%)"
+      ],
+      [
+        "TOTAL",
+        "",
+        "0 PERSONEL AKTIF",
+        "",
+        "",
+        "",
+        0,
+        0,
+        0,
+        0,
+        "100.0%"
+      ]
+    ]
+  },
+  {
+    "op": "clear",
+    "range": "LEDGER_TASK!A1:L200"
+  },
+  {
+    "op": "write",
+    "range": "LEDGER_TASK!A1",
+    "data": [
+      [
+        "LEDGER TASK & BOUNTY - RINCIAN DELIVERABLES PERSONEL",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "Total Task Selesai:",
+        "=COUNTIF(K5:K200; \"SELESAI\")",
+        "Total Bounty Selesai (IDR):",
+        "=SUMIF(K5:K200; \"SELESAI\"; J5:J200)",
+        "Total Pending Proses (IDR):",
+        "=SUMIF(K5:K200; \"PROSES\"; J5:J200)",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      [
+        "NO",
+        "TASK_ID",
+        "PERSON_ID",
+        "NAMA PERSONEL",
+        "ROLE TITLE",
+        "JUDUL TASK / DELIVERABLE",
+        "KATEGORI",
+        "HARGA SATUAN (IDR)",
+        "QTY",
+        "TOTAL BARIS (IDR)",
+        "STATUS",
+        "TANGGAL"
+      ]
+    ]
+  },
+  {
+    "op": "clear",
+    "range": "APP_STATE_JSON!A1:B10"
+  },
+  {
+    "op": "write",
+    "range": "APP_STATE_JSON!A1",
+    "data": [
+      [
+        "KEY",
+        "VALUE"
+      ],
+      [
+        "UPDATED_AT",
+        "2026-11-10T05:12:38.038Z"
+      ],
+      [
+        "SPREADSHEET_ID",
+        "1T2Z02j95WM6eQqKsZslkNf7PsKDipWa-5EHGuW14KTc"
+      ],
+      [
+        "RAW_STATE_JSON",
+        "{\"spreadsheetId\":\"1T2Z02j95WM6eQqKsZslkNf7PsKDipWa-5EHGuW14KTc\",\"updatedAt\":\"2026-11-10T05:12:38.029Z\",\"budgetPool\":0,\"tiers\":[{\"id\":\"TIER_01\",\"code\":\"TIER_01\",\"name\":\"TIER_01 (Lead / Manager)\",\"badgeLabel\":\"T1 LEADS\",\"roleScope\":\"Architecture, Strategy & Team Oversight\",\"defaultFloor\":12000000,\"currentFloor\":100000,\"weight\":2.2,\"description\":\"Batas minimal gaji pokok manajerial & arsitek sistem.\"},{\"id\":\"TIER_02\",\"code\":\"TIER_02\",\"name\":\"TIER_02 (Senior / Specialist)\",\"badgeLabel\":\"T2 SENIORS\",\"roleScope\":\"Core Feature Dev, Product UI/UX, Growth Ops\",\"defaultFloor\":7500000,\"currentFloor\":100000,\"weight\":1.5,\"description\":\"Batas minimal spesialis senior & desainer independen.\"},{\"id\":\"TIER_03\",\"code\":\"TIER_03\",\"name\":\"TIER_03 (Core Team / Associate)\",\"badgeLabel\":\"T3 ASSOCIATES\",\"roleScope\":\"Execution, Content Production, QA & Support\",\"defaultFloor\":4500000,\"currentFloor\":100000,\"weight\":1,\"description\":\"Batas minimal pelaksana produksi harian & associates.\"}],\"personnel\":[]}"
+      ]
+    ]
+  }
+]
