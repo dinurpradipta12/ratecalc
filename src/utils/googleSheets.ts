@@ -33,7 +33,7 @@ export function loadGSheetsConfig(): GSheetsConfig {
           parsed.spreadsheetUrl ||
           `https://docs.google.com/spreadsheets/d/${parsed.spreadsheetId || DEFAULT_SPREADSHEET_ID}/edit`,
         webhookUrl: parsed.webhookUrl || DEFAULT_WEBHOOK_URL,
-        autoPullOnLoad: parsed.autoPullOnLoad ?? false,
+        autoPullOnLoad: parsed.autoPullOnLoad ?? true,
         lastSyncedAt: parsed.lastSyncedAt,
       };
     }
@@ -44,7 +44,7 @@ export function loadGSheetsConfig(): GSheetsConfig {
     spreadsheetId: DEFAULT_SPREADSHEET_ID,
     spreadsheetUrl: DEFAULT_SPREADSHEET_URL,
     webhookUrl: DEFAULT_WEBHOOK_URL,
-    autoPullOnLoad: false,
+    autoPullOnLoad: true,
   };
 }
 
